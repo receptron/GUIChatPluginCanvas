@@ -1,6 +1,6 @@
 {
   "name": "@gui-chat-plugin/canvas",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Drawing canvas plugin for GUIChat",
   "type": "module",
   "main": "./dist/index.cjs",

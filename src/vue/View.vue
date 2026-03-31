@@ -233,13 +233,8 @@ const updateCanvasSize = () => {
   if (canvasContainer) {
     const containerRect = canvasContainer.getBoundingClientRect();
 
-    // Be more conservative with width - subtract more for padding, borders, scrollbars
-    const availableWidth = containerRect.width - 64; // More margin for width
-    const availableHeight = containerRect.height - 64; // More margin for height
-
-    // Cap the width to ensure it doesn't overflow
-    const newWidth = Math.max(300, Math.min(600, Math.floor(availableWidth)));
-    const newHeight = Math.max(200, Math.min(400, Math.floor(availableHeight)));
+    const newWidth = Math.floor(containerRect.width);
+    const newHeight = Math.floor(newWidth * 9 / 16);
 
     // Only update if the size actually changed to avoid unnecessary re-renders
     if (newWidth !== canvasWidth.value || newHeight !== canvasHeight.value) {

@@ -11,8 +11,11 @@ This plugin provides a drawing canvas where users can create drawings, sketches,
 ## Installation
 
 ```bash
-yarn add @gui-chat-plugin/canvas
+yarn add @gui-chat-plugin/canvas gui-chat-protocol
 ```
+
+> `gui-chat-protocol` is a peer dependency — install it alongside the plugin; the host application provides the runtime and this plugin only declares the compatible range.
+
 
 ## Dependencies
 

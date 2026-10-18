@@ -1,6 +1,7 @@
 # @gui-chat-plugin/canvas
 
 [![npm version](https://badge.fury.io/js/%40gui-chat-plugin%2Fcanvas.svg)](https://www.npmjs.com/package/@gui-chat-plugin/canvas)
+[![scoria](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/receptron/GUIChatPluginCanvas/badges/scoria.json)](https://github.com/receptron/GUIChatPluginCanvas/actions/workflows/scoria.yml)
 
 A drawing canvas plugin for [MulmoChat](https://github.com/receptron/MulmoChat).
 

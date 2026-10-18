@@ -7,8 +7,7 @@ export const TOOL_NAME = "openCanvas";
 export const TOOL_DEFINITION = {
   type: "function" as const,
   name: TOOL_NAME,
-  description:
-    "Open a drawing canvas for the user to create drawings, sketches, or diagrams.",
+  description: "Open a drawing canvas for the user to create drawings, sketches, or diagrams.",
   parameters: {
     type: "object" as const,
     properties: {},

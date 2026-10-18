@@ -20,13 +20,7 @@ export const plugin: ToolPlugin<ImageToolData, unknown, CanvasArgs> = {
 export type { CanvasArgs, ImageToolData, CanvasDrawingState } from "../core/types";
 
 // Re-export utilities
-export {
-  TOOL_NAME,
-  TOOL_DEFINITION,
-  SYSTEM_PROMPT,
-  executeOpenCanvas,
-  pluginCore,
-} from "../core/plugin";
+export { TOOL_NAME, TOOL_DEFINITION, SYSTEM_PROMPT, executeOpenCanvas, pluginCore } from "../core/plugin";
 
 export { View, Preview };
 

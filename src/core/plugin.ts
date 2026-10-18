@@ -12,14 +12,10 @@ export { TOOL_NAME, TOOL_DEFINITION, SYSTEM_PROMPT } from "./definition";
 /**
  * Execute the openCanvas function
  */
-export const executeOpenCanvas = async (
-  _context: ToolContext,
-  _args: CanvasArgs,
-): Promise<ToolResult<ImageToolData>> => {
+export const executeOpenCanvas = async (_context: ToolContext, _args: CanvasArgs): Promise<ToolResult<ImageToolData>> => {
   return {
     message: "Drawing canvas opened",
-    instructions:
-      "Tell the user that you are able to turn the drawing into a photographic image, a manga or any other art style.",
+    instructions: "Tell the user that you are able to turn the drawing into a photographic image, a manga or any other art style.",
     title: "Drawing Canvas",
   };
 };

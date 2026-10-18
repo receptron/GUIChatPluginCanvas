@@ -11,9 +11,7 @@
                 @click="brushSize = size"
                 :class="[
                   'w-8 h-8 rounded border-2 transition-colors',
-                  brushSize === size
-                    ? 'border-blue-500 bg-blue-100'
-                    : 'border-gray-300 bg-white hover:bg-gray-50',
+                  brushSize === size ? 'border-blue-500 bg-blue-100' : 'border-gray-300 bg-white hover:bg-gray-50',
                 ]"
               >
                 <div
@@ -28,34 +26,18 @@
           </div>
 
           <div class="flex items-center gap-2">
-            <input
-              v-model="brushColor"
-              type="color"
-              class="w-12 h-8 rounded border border-gray-300"
-            />
+            <input v-model="brushColor" type="color" class="w-12 h-8 rounded border border-gray-300" />
           </div>
         </div>
 
         <div class="flex items-center gap-1">
-          <button
-            @click="undo"
-            class="w-8 h-8 flex items-center justify-center rounded border-2 border-gray-300 bg-white hover:bg-gray-50"
-            title="Undo"
-          >
+          <button @click="undo" class="w-8 h-8 flex items-center justify-center rounded border-2 border-gray-300 bg-white hover:bg-gray-50" title="Undo">
             ↩
           </button>
-          <button
-            @click="redo"
-            class="w-8 h-8 flex items-center justify-center rounded border-2 border-gray-300 bg-white hover:bg-gray-50"
-            title="Redo"
-          >
+          <button @click="redo" class="w-8 h-8 flex items-center justify-center rounded border-2 border-gray-300 bg-white hover:bg-gray-50" title="Redo">
             ↪
           </button>
-          <button
-            @click="clear"
-            class="w-8 h-8 flex items-center justify-center rounded border-2 border-red-300 bg-white hover:bg-red-50"
-            title="Clear"
-          >
+          <button @click="clear" class="w-8 h-8 flex items-center justify-center rounded border-2 border-red-300 bg-white hover:bg-red-50" title="Clear">
             🗑
           </button>
         </div>
@@ -119,8 +101,7 @@ const canvasRenderKey = ref(0);
 
 const restoreDrawingState = () => {
   if (props.selectedResult?.viewState?.drawingState) {
-    const state = props.selectedResult.viewState
-      .drawingState as CanvasDrawingState;
+    const state = props.selectedResult.viewState.drawingState as CanvasDrawingState;
 
     brushSize.value = state.brushSize || 5;
     brushColor.value = state.brushColor || "#000000";
@@ -234,7 +215,7 @@ const updateCanvasSize = () => {
     const containerRect = canvasContainer.getBoundingClientRect();
 
     const newWidth = Math.floor(containerRect.width);
-    const newHeight = Math.floor(newWidth * 9 / 16);
+    const newHeight = Math.floor((newWidth * 9) / 16);
 
     // Only update if the size actually changed to avoid unnecessary re-renders
     if (newWidth !== canvasWidth.value || newHeight !== canvasHeight.value) {

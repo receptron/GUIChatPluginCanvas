@@ -71,5 +71,8 @@
     "canvas",
     "drawing"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "resolutions": {
+    "minimatch": "^11.0.5"
+  }
 }
